@@ -1,0 +1,60 @@
+Creating 'blood seeker' table:
+
+CREATE TABLE `Blood Seeker` (
+  `SID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `User name` CHAR(10) NOT NULL,
+  `Password` CHAR(10) NOT NULL,
+  `First Name` VARCHAR(10) NOT NULL,
+  `Last Name` VARCHAR(10) NOT NULL,
+  `Birth date` INT NOT NULL,
+  `Sex` VARCHAR(10) NOT NULL,
+  `Phone number` VARCHAR(20) NOT NULL,
+  `Email` VARCHAR(25) NOT NULL,
+  `Address` LONGTEXT NOT NULL,
+  PRIMARY KEY (`SID`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+Creating 'blood donor' table:
+
+CREATE TABLE `Donor` (
+  `DID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `User name` CHAR(10) NOT NULL,
+  `Password` CHAR(10) NOT NULL,
+  `First name` VARCHAR(20) NOT NULL,
+  `Last name` VARCHAR(20) NOT NULL,
+  `Birth date` DATE NOT NULL,
+  `Sex` VARCHAR(10) NOT NULL,
+  `Blood group` VARCHAR(5) NOT NULL,
+  `Phone` VARCHAR(20) NOT NULL,
+  `Email` VARCHAR(20) NOT NULL,
+  `Address` LONGTEXT NOT NULL,
+  `Corona recovered?` VARCHAR(10) NOT NULL,
+  `Last donated` DATE NOT NULL,
+  PRIMARY KEY (`DID`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+Creating 'blood information' table
+
+CREATE TABLE `Blood infotmation` (
+  `Bloodcode` INT UNSIGNED NOT NULL,
+  `Blood group` VARCHAR(5) NOT NULL,
+  `Quantity` INT NOT NULL,
+  PRIMARY KEY (`Bloodcode`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+Creating 'admin' table
+
+CREATE TABLE `admin` (
+  `AID` INT NOT NULL,
+  `Password` CHAR(10) NOT NULL,
+  `First name` VARCHAR(10) NOT NULL,
+  `Last name` VARCHAR(10) NOT NULL,
+  `Phone number` VARCHAR(20) NOT NULL,
+  `Email` VARCHAR(20) NOT NULL,
+  `Position` VARCHAR(10) NOT NULL,
+  `SALARY` DOUBLE NOT NULL,
+  `Joined on` DATE NOT NULL,
+  `MID` INT NOT NULL,
+  PRIMARY KEY (`AID`),
+  FOREIGN KEY (MID) REFERENCES admin(AID)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
