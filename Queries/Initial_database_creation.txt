@@ -1,59 +1,59 @@
 Creating 'blood seeker' table:
 
-CREATE TABLE `Blood Seeker` (
+CREATE TABLE `blood_seeker` (
   `SID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `User name` CHAR(10) NOT NULL,
-  `Password` CHAR(10) NOT NULL,
-  `First Name` VARCHAR(10) NOT NULL,
-  `Last Name` VARCHAR(10) NOT NULL,
-  `Birth date` INT NOT NULL,
-  `Sex` VARCHAR(10) NOT NULL,
-  `Phone number` VARCHAR(20) NOT NULL,
-  `Email` VARCHAR(25) NOT NULL,
-  `Address` LONGTEXT NOT NULL,
+  `user_name` VARCHAR(15) NOT NULL,
+  `password` CHAR(10) NOT NULL,
+  `first_name` VARCHAR(10) NOT NULL,
+  `last_name` VARCHAR(10) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `sex` VARCHAR(10) NOT NULL,
+  `phone_number` VARCHAR(20) NOT NULL,
+  `email` VARCHAR(25) NOT NULL,
+  `address` LONGTEXT NOT NULL,
   PRIMARY KEY (`SID`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-Creating 'blood donor' table:
+Creating 'blood_donor' table:
 
-CREATE TABLE `Donor` (
+CREATE TABLE `blood_donor` (
   `DID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `User name` CHAR(10) NOT NULL,
-  `Password` CHAR(10) NOT NULL,
-  `First name` VARCHAR(20) NOT NULL,
-  `Last name` VARCHAR(20) NOT NULL,
-  `Birth date` DATE NOT NULL,
-  `Sex` VARCHAR(10) NOT NULL,
-  `Blood group` VARCHAR(5) NOT NULL,
-  `Phone` VARCHAR(20) NOT NULL,
-  `Email` VARCHAR(20) NOT NULL,
-  `Address` LONGTEXT NOT NULL,
-  `Corona recovered?` VARCHAR(10) NOT NULL,
-  `Last donated` DATE NOT NULL,
+  `User_name` VARCHAR(15) NOT NULL,
+  `password` CHAR(10) NOT NULL,
+  `first_name` VARCHAR(10) NOT NULL,
+  `last_name` VARCHAR(10) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `sex` VARCHAR(10) NOT NULL,
+  `blood_group` VARCHAR(5) NOT NULL,
+  `phone_number` VARCHAR(20) NOT NULL,
+  `email` VARCHAR(20) NOT NULL,
+  `address` LONGTEXT NOT NULL,
+  `corona_recovery` VARCHAR(10) NOT NULL,
+  `last_donated` DATE NOT NULL,
   PRIMARY KEY (`DID`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 Creating 'blood information' table
 
-CREATE TABLE `Blood infotmation` (
-  `Bloodcode` INT UNSIGNED NOT NULL,
-  `Blood group` VARCHAR(5) NOT NULL,
-  `Quantity` INT NOT NULL,
-  PRIMARY KEY (`Bloodcode`)
+CREATE TABLE `blood_infotmation` (
+  `bloodcode` INT UNSIGNED NOT NULL,
+  `blood_group` VARCHAR(5) NOT NULL,
+  `quantity` INT NOT NULL,
+  PRIMARY KEY (`bloodcode`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 Creating 'admin' table
 
 CREATE TABLE `admin` (
   `AID` INT NOT NULL,
-  `Password` CHAR(10) NOT NULL,
-  `First name` VARCHAR(10) NOT NULL,
-  `Last name` VARCHAR(10) NOT NULL,
-  `Phone number` VARCHAR(20) NOT NULL,
-  `Email` VARCHAR(20) NOT NULL,
-  `Position` VARCHAR(10) NOT NULL,
-  `SALARY` DOUBLE NOT NULL,
-  `Joined on` DATE NOT NULL,
+  `password` CHAR(10) NOT NULL,
+  `first_name` VARCHAR(10) NOT NULL,
+  `last name` VARCHAR(10) NOT NULL,
+  `phone_number` VARCHAR(20) NOT NULL,
+  `email` VARCHAR(20) NOT NULL,
+  `position` VARCHAR(10) NOT NULL,
+  `salary` DOUBLE NOT NULL,
+  `joined_on` DATE NOT NULL,
   `MID` INT NOT NULL,
   PRIMARY KEY (`AID`),
   FOREIGN KEY (MID) REFERENCES admin(AID)
