@@ -9,4 +9,4 @@ user and donor registration and data management of other related information.
 
 Aim:
 Our goal is to create an online blood management system which will create an online platform
-for blood donors and people who are in need of blood
+for blood donors and people who are in need of blood.
