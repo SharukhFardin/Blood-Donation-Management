@@ -1,0 +1,10 @@
+ALTER TABLE `blood_donor`
+  ADD UNIQUE(`User_name`),
+  ADD UNIQUE(`email`),
+  ADD UNIQUE(`phone_number`);
+
+ALTER TABLE `blood_seeker`
+  ADD UNIQUE(`user_name`),
+  ADD UNIQUE(`email`),
+  ADD UNIQUE(`phone_number`);
+

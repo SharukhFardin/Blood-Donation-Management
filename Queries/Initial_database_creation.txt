@@ -1,5 +1,3 @@
-Creating 'blood seeker' table :
-
 CREATE TABLE `blood_seeker` (
   `SID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_name` VARCHAR(15) NOT NULL,
@@ -13,8 +11,6 @@ CREATE TABLE `blood_seeker` (
   `address` LONGTEXT NOT NULL,
   PRIMARY KEY (`SID`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-Creating 'blood_donor' table :
 
 CREATE TABLE `blood_donor` (
   `DID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -33,16 +29,12 @@ CREATE TABLE `blood_donor` (
   PRIMARY KEY (`DID`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-Creating 'blood information' table :
-
 CREATE TABLE `blood_information` (
   `bloodcode` INT UNSIGNED NOT NULL,
   `blood_group` VARCHAR(5) NOT NULL,
   `quantity` INT NOT NULL,
   PRIMARY KEY (`bloodcode`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-Creating 'admin' table
 
 CREATE TABLE `admin` (
   `AID` INT NOT NULL,
