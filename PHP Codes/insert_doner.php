@@ -19,7 +19,7 @@
 
 	//inserting data
 		$is_inserted = mysqli_query($conn,"
-			INSERT INTO blood_donor(User_name,password,first_name,last_name,birth_date,sex,blood_group,phone_number,email,address, corona_recovery, last_donated)
+			INSERT INTO blood_seeker(User_name,password,first_name,last_name,birth_date,sex,blood_group,phone_number,email,address, corona_recovery, last_donated)
 			VALUES('$User_name','$password','$first_name','$last_name','$birth_date','$sex','$blood_group','$phone_number','$email','$address','$corona_recovery','$last_donated')");
 
 
