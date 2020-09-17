@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration form1</title>
+	       <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row col-lg-6 col-lg-offset-3">
+			<div class="panel panel-primary">
+				<div class="panel-heading text-center">
+					<h1>Donor Registration Form</h1>
+				</div>
+				<div class="panel-body">
+					<form action="insert_doner.php" method="post">
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" class="form-control" id="firstname" name="first_name" required />                      
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" class="form-control" id="lastname" name="last_name" required /                        
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <input type="text" class="form-control" id="phone" name="phone_number" required /                        
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" required /                        
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <div>
+                                <label for="male" class="radio-inline"><input type="radio" name="sex" value="male" id="male">Male</label>
+                                <label for="female" class="radio-inline"><input type="radio" name="sex" value="female" id="female">Female</label>   
+                                <label for="other" class="radio-inline"><input type="radio" name="sex" value="other" id="other">Other</label>   
+                            </div>                                             
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" name="User_name" required />                      
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="text" class="form-control" id="password" name="password" required placeholder="At max 10 characters" />                      
+                        </div>
+                        <div class="form-group">
+                            <label for="birthdate">Birth Date</label>
+                            <input type="text" class="form-control" id="birthdate" name="birth_date" required placeholder="YYYY-MM-DD" />                      
+                        </div>
+                        <div class="form-group">
+                            <label for="bgroup">Blood Group</label>
+                            <input type="text" class="form-control" id="bgroup" name="blood_group" required placeholder="A+ (for examle)" />                      
+                        </div>
+                        <div class="form-group">
+                            <label for="donation">Last blood donation on</label>
+                            <input type="text" class="form-control" id="donation" name="last_donated" required placeholder="YYYY-MM-DD" />                      
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" name="address" required />                      
+                        </div>
+                        <div class="form-group">
+                            <label for="corona">Are you recovered from COVID19?</label>
+                            <div>
+                                <label for="yes" class="radio-inline"><input type="radio" name="corona_recovery" value="yes" id="yes">Yes</label>
+                                <label for="no" class="radio-inline"><input type="radio" name="corona_recovery" value="no" id="no">No</label>     
+                            </div>                                             
+                        </div>
+                      
+                            <input type="submit" class="btn btn-primary">                                                  
+                    </form>
+				</div>
+				<div class="panel-footer text-right">
+					<small> &copy; CSE311.9 GROUP 'I'</small>
+				</div>				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
