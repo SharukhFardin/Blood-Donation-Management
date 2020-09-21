@@ -1,2 +1,5 @@
 ALTER TABLE admin
 MODIFY MID int NULL;
+
+ALTER TABLE admin 
+CHANGE 'last name' last_name VARCHAR(10);
