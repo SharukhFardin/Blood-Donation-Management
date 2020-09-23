@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2020 at 12:19 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.6
+-- Generation Time: Sep 23, 2020 at 05:28 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `final-project`
+-- Database: `final_project`
 --
 
 -- --------------------------------------------------------
@@ -31,7 +31,7 @@ CREATE TABLE `admin` (
   `AID` int(11) NOT NULL,
   `password` char(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `first_name` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `last_name` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last name` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone_number` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `position` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -39,17 +39,6 @@ CREATE TABLE `admin` (
   `joined_on` date NOT NULL,
   `MID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`AID`, `password`, `first_name`, `last_name`, `phone_number`, `email`, `position`, `salary`, `joined_on`, `MID`) VALUES
-(18218, 'ACQUARIUS1', 'MAHMUD', 'ISLAM', '01711234489', 'mahmud19@gmail.com', 'MANAGER', 20000, '2020-01-01', NULL),
-(18219, 'SAGITARIUS', 'SABBIR', 'AHMED', '01511534782', 'sabbir@gmail.com', 'REGISTER', 15000, '2020-01-05', 18218),
-(18220, 'OPHIUCHUS9', 'FOYSAL', 'HAQUE', '01915238459', 'foysal@gmail.com', 'REGISTER', 13500, '2020-01-19', 18218),
-(18221, 'LIBRALEO12', 'NUSRAT', 'JABIN', '01671339424', 'nusrat@gmail.com', 'REGISTER', 12000, '2020-02-01', 18218),
-(18222, 'LIBERTY459', 'HILLOL', 'AHAMED', '01815234195', 'hillol@gmail.com', 'REGISTER', 13000, '2020-03-05', 18218);
 
 -- --------------------------------------------------------
 
@@ -72,13 +61,6 @@ CREATE TABLE `blood_donor` (
   `corona_recovery` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_donated` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `blood_donor`
---
-
-INSERT INTO `blood_donor` (`DID`, `User_name`, `password`, `first_name`, `last_name`, `birth_date`, `sex`, `blood_group`, `phone_number`, `email`, `address`, `corona_recovery`, `last_donated`) VALUES
-(1, 'sharukh007', 'iamscared', 'Sharukh', 'Fardin', '1997-08-28', 'male', 'A+', '01734983482', 'sharukhfardin1234@gm', 'Banasree', 'no', '2019-08-02');
 
 -- --------------------------------------------------------
 
@@ -111,12 +93,49 @@ CREATE TABLE `blood_seeker` (
   `address` longtext COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `blood_seeker`
+-- Table structure for table `hospital`
 --
 
-INSERT INTO `blood_seeker` (`SID`, `user_name`, `password`, `first_name`, `last_name`, `birth_date`, `sex`, `phone_number`, `email`, `address`) VALUES
-(1, 'abir121', 'iamscared', 'Abir', 'Ahmed', '1998-07-18', 'male', '01724678321', 'abir.rahman@gmail.com', 'Gulshan');
+CREATE TABLE `hospital` (
+  `Hospital_code` int(5) NOT NULL,
+  `Hospital_name` varchar(20) NOT NULL,
+  `location` varchar(20) NOT NULL,
+  `phone_number` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hospital`
+--
+
+INSERT INTO `hospital` (`Hospital_code`, `Hospital_name`, `location`, `phone_number`) VALUES
+(10001, 'popular medical', 'badda', '01713638502'),
+(10002, 'shastho sheba', 'kurmitola', '01713533513'),
+(10003, 'sunflower care', 'jigatola', '01913638572'),
+(10004, 'podma medical', 'malibag', '01933638809'),
+(10005, 'joruri sheba', 'mirpur', '01673838701'),
+(10006, 'holy family', 'banani', '01883693509'),
+(10007, 'bardem hospital', 'komlapur', '01712358679'),
+(10008, 'Apolo hospital', 'boshundhora', '01553638502'),
+(10009, 'south pacefic medica', 'gulshan', '01715638412'),
+(10010, 'united hospital', 'nodda', '01617630502'),
+(10011, 'newlife hospital', 'uttara', '01710838029'),
+(10012, 'uttara care', 'uttara', '01723635507'),
+(10013, 'family care', 'purbachol', '01920635800'),
+(10014, 'redstar hospital', 'jatrabari', '01663639507'),
+(10015, 'Ace hospital', 'panthopath', '01323645792'),
+(10016, 'Ibne sina hospital', 'mogbazar', '01799465580'),
+(10017, 'glory medical', 'hatirjheel', '01558296503'),
+(10018, 'True Life hospital', 'baridhara', '01327634793'),
+(10019, 'twin leaf hospital', 'khilgaon', '01925834490'),
+(10020, 'harmony', 'shajahanpur', '01723630099'),
+(10021, 'OneHealth hospital', 'wari', '01523633301'),
+(10022, 'happy family', 'banasree', '01675635569'),
+(10023, 'maple heart hospital', 'motijheel', '01823637705'),
+(10024, 'green care', 'shajahanpur', '01923635512'),
+(10025, 'goodlife hospital', 'rampura', '01725635674');
 
 --
 -- Indexes for dumped tables
@@ -133,10 +152,7 @@ ALTER TABLE `admin`
 -- Indexes for table `blood_donor`
 --
 ALTER TABLE `blood_donor`
-  ADD PRIMARY KEY (`DID`),
-  ADD UNIQUE KEY `User_name` (`User_name`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `phone_number` (`phone_number`);
+  ADD PRIMARY KEY (`DID`);
 
 --
 -- Indexes for table `blood_information`
@@ -148,10 +164,7 @@ ALTER TABLE `blood_information`
 -- Indexes for table `blood_seeker`
 --
 ALTER TABLE `blood_seeker`
-  ADD PRIMARY KEY (`SID`),
-  ADD UNIQUE KEY `user_name` (`user_name`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `phone_number` (`phone_number`);
+  ADD PRIMARY KEY (`SID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -161,13 +174,13 @@ ALTER TABLE `blood_seeker`
 -- AUTO_INCREMENT for table `blood_donor`
 --
 ALTER TABLE `blood_donor`
-  MODIFY `DID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `DID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `blood_seeker`
 --
 ALTER TABLE `blood_seeker`
-  MODIFY `SID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `SID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
