@@ -1,0 +1,46 @@
+<?php
+include_once('connection.php');
+$query="SELECT * FROM admin";
+$result=mysql_query($query);
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doner Login</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class-"jumbotron">
+        <div class="card">
+            <div class="card-header text-center text-white bg-success lg-3">
+                Document from database
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Give table title here</h5>
+                <table class="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                          <th scope="col">AID</th>
+                          <th scope="col">First Name</th>
+                          <th scope="col">Last Name</th>
+                          <th scope="col">Email</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                          <th>007</th>
+                          <td>Sharukh</td>
+                          <td>Fardin</td>
+                          <td>sharukhfardin1234@gmail.com</td>
+                          
+                    </tr>
+                  </tbody>
+                </table>
+            </div>      
+        </div>             
+        </div>   
+    </div>  
+</body>
