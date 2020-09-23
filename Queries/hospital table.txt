@@ -1,0 +1,41 @@
+CREATING TABLE HOSPITAL:
+
+create table `HOSPITAL`
+(
+    Hospital_code INT(5) not null,
+    Hospital_name varchar(20) not null,
+    location varchar(20) not null,
+    phone_number varchar(11) not null
+    );
+
+
+INSERTING VALUES:
+
+insert into `hospital`
+VALUES
+(10001,"popular medical","badda","01713638502"),
+(10002,"shastho sheba","kurmitola","01713533513"),
+(10003,"sunflower care","jigatola","01913638572"),
+(10004,"podma medical","malibag","01933638809"),
+(10005,"joruri sheba","mirpur","01673838701"),
+(10006,"holy family","banani","01883693509"),
+(10007,"bardem hospital","komlapur","01712358679"),
+(10008,"Apolo hospital","boshundhora","01553638502"),
+(10009,"south pacefic medical","gulshan","01715638412"),
+(10010,"united hospital","nodda","01617630502"),
+(10011,"newlife hospital","uttara","01710838029"),
+(10012,"uttara care","uttara","01723635507"),
+(10013,"family care","purbachol","01920635800"),
+(10014,"redstar hospital","jatrabari","01663639507"),
+(10015,"Ace hospital","panthopath","01323645792"),
+(10016,"Ibne sina hospital","mogbazar","01799465580"),
+(10017,"glory medical","hatirjheel","01558296503"),
+(10018,"True Life hospital","baridhara","01327634793"),
+(10019,"twin leaf hospital","khilgaon","01925834490"),
+(10020,"harmony","shajahanpur","01723630099"),
+(10021,"OneHealth hospital","wari","01523633301"),
+(10022,"happy family","banasree","01675635569"),
+(10023,"maple heart hospital","motijheel","01823637705"),
+(10024,"green care","shajahanpur","01923635512"),
+(10025,"goodlife hospital","rampura","01725635674");
+
