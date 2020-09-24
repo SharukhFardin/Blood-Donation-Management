@@ -1,0 +1,12 @@
+Insert into `blood_seeker`
+values
+	(6001,"tanjim5","demeter","tanjim","sorkar","1997-12-27","male","01653673044","tanjim@gmail.com","kamarpara,Dhaka"),
+	(6002,"fahim","ninjutsu","fahim","alam","1998-04-23","male","01824924696","fahim@gmail.com","purbachol,Dhaka");
+	(6003,"tasnuva","genjutsu","tasnuva","sneha","1995-07-23","female","01553893690","tasnuva@gmail.com","eskaton road,Dhaka"),
+	(6004,"isabela","taijutsu","isabela","gomez","2000-09-14","female","01799643602","isabela@gmail.com","boshundhora R/A,Dhaka"),
+	(6005,"abrar","senjutsu","abrar","shajmain","2001-06-15","male","01953873684","abrar@gmail.com","nodda,Dhaka"),
+	(6006,"yamin","akatsuki","yamin","khan","1994-07-20","male","01913563603","yamin@gmail.com","shahajadpur,Dhaka"),
+	(6007,"toukir","uchiha","toukir","ahmed","1998-12-28","male","01770268465","toukir@gmail.com","malibag,Dhaka"),
+	(6008,"mirza","hera12","mirza","robiul","1997-12-10","male","01613050699","mirza@gmail.com","banani,Dhaka"),
+	(6009,"turzo","artemis","turzo","ahmed","2000-07-14","male","01736736122","turzo@gmail.com","khilgaon,Dhaka"),
+	(6010,"simran","saturn","simran","chowdhury","1999-03-09","female","01970604694","simran@gmail.com","gulshan-2,Dhaka");
