@@ -1,7 +1,7 @@
 <?php
 include_once('connect.php');
 $str =$_POST['text'];
-$query="SELECT * FROM blood_donor WHERE User_name ='$str' ";
+$query="SELECT * FROM blood_seeker WHERE User_name ='$str' ";
 $result=mysqli_query($conn,$query);
 ?>
 
@@ -25,14 +25,14 @@ $result=mysqli_query($conn,$query);
                 <table class="table table-hover table-bordered">
                   <thead>
                     <tr>
-                          <th name="User_name" scope="col">Donor's Username</th>
+                          <th name="user_name" scope="col">Seeker's Username</th>
                           <th scope="col">First Name</th>
                           <th scope="col">Last Name</th>
                           <th scope="col">Phone Number</th>
                           <th scope="col">Email</th>
                           <th scope="col">Birth Date</th>
                           <th scope="col">Gender</th>
-                          <th scope="col">blood_group</th>
+                          <th scope="col">Address</th>
                           <th >Action</th>
                     </tr>
                   </thead>
@@ -41,16 +41,16 @@ $result=mysqli_query($conn,$query);
                   ?>
 	                  <tbody>
   	                    <tr>
-  	                          <th><?php echo $rows['User_name']; ?></th>
+  	                          <th><?php echo $rows['user_name']; ?></th>
   	                          <td><?php echo $rows['first_name']; ?></td>
   	                          <td><?php echo $rows['last_name']; ?></td>
   	                          <td><?php echo $rows['phone_number']; ?></td>
   	                          <td><?php echo $rows['email']; ?></td>
   	                          <td><?php echo $rows['birth_date']; ?></td>
   	                          <td><?php echo $rows['sex']; ?></td>
-                              <td><?php echo $rows['blood_group']; ?></td>
-  	                          <td>  <form  action='donor_delete_button.php?name="<?php echo $rows['User_name']; ?>"' method="post">
-                              <input type="hidden" name="User_name" value="<?php echo $rows['User_name']; ?> ">
+                              <td><?php echo $rows['address']; ?></td>
+  	                          <td>  <form  action='seeker_delete_button.php?name="<?php echo $rows['user_name']; ?>"' method="post">
+                              <input type="hidden" name="user_name" value="<?php echo $rows['user_name']; ?> ">
                               <input type="submit" class="btn btn-danger" name="submit" name="submit" value="DELETE" id="DELETE"> </form>
                               </td>         
   	                    </tr>
