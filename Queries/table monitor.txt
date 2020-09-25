@@ -1,0 +1,28 @@
+creating table monitor:
+
+
+CREATE table `monitors`(
+AID int not null,
+bloodcode int unsigned not null,
+foreign key (AID)
+	REFERENCES `admin`(AID)
+	on delete cascade,
+foreign key (bloodcode) 
+	references `blood_information`(bloodcode)
+	on delete cascade
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+insert values:
+
+
+insert into monitors
+values
+	(18219, 1001),
+	(18219, 1002),
+	(18220, 1003),
+	(18220, 1004),
+	(18221, 1005),
+	(18221, 1006),
+	(18222, 1007),
+	(18222, 1008);
