@@ -21,7 +21,7 @@ $result=mysqli_query($conn,$query);
                 
             </div>
             <div class="card-body text-center">
-                <h5 class="card-title">All Registered Donors Information</h5>
+                <h5 class="card-title">All Registered Seeker's Information</h5>
                 <table class="table table-hover table-bordered">
                   <thead>
                     <tr>
