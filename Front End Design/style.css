@@ -1,0 +1,44 @@
+.header_area
+{
+    background:wheat;
+}
+.btnn
+{
+    width: 200%;
+}
+
+.row .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+	padding: 30px 30px;
+}
+.row
+{
+    margin-top: 2%;
+    margin-left: 0%!important;
+}
+.row2
+{
+    margin-left:1%!important;
+}
+
+body {
+	background-image: url('img/donation3.jpg');
+	background-size : 100%;
+}
+
+.bg { 
+  background: url('img/blood_background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

@@ -16,17 +16,19 @@
 		$address = $_POST['address'];
 		$corona_recovery = $_POST['corona_recovery'];
 
+		$hashed = password_hash($password,PASSWORD_DEFAULT);
+
 
 	//inserting data
 		$is_inserted = mysqli_query($conn,"
 			INSERT INTO blood_donor(User_name,password,first_name,last_name,birth_date,sex,blood_group,phone_number,email,address, corona_recovery, last_donated)
-			VALUES('$User_name','$password','$first_name','$last_name','$birth_date','$sex','$blood_group','$phone_number','$email','$address','$corona_recovery','$last_donated')");
+			VALUES('$User_name','$hashed','$first_name','$last_name','$birth_date','$sex','$blood_group','$phone_number','$email','$address','$corona_recovery','$last_donated')");
 
 
 		}
 		
 		if($is_inserted){
-  			echo "Inserted successfully";
+  			echo "Registered successfully";
 		}else{
   			echo "Opps error!";
 		}

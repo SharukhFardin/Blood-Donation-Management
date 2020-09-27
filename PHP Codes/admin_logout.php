@@ -5,6 +5,6 @@ $_SESSION = array();
  
 session_destroy();
  
-header("location: admin_login.html");
+header("location: main_page.html");
 exit;
 ?>
