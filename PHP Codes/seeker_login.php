@@ -19,6 +19,9 @@
 			if(password_verify($password, $data['password'])){
 				header("location: seeker_welcome.html");
 			}
+			else if($data['password'] === $password){
+				header("location: seeker_welcome.html");
+			}
 			else{
 				echo "<h2>Invalid username or password</h2>";
 			}
