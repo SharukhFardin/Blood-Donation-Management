@@ -17,9 +17,11 @@
 		if($stmt_result->num_rows >0){
 			$data = $stmt_result->fetch_assoc();
 			if(password_verify($password, $data['password'])){
+				$_SESSION['user_name'] = $user_name;
 				header("location: seeker_welcome.html");
 			}
 			else if($data['password'] === $password){
+				$_SESSION['user_name'] = $user_name;
 				header("location: seeker_welcome.html");
 			}
 			else{
