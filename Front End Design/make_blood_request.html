@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blood Request Form</title>
+	       <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row col-lg-6 col-lg-offset-3">
+			<div class="panel panel-primary">
+				<div class="panel-heading text-center">
+					<h1>Blood Request Form</h1>
+				</div>
+				<div class="panel-body">
+					<form action="make_blood_request.php" method="post">
+                        <div class="form-group">
+                            <label for="username">Your Username</label>
+                            <input type="text" class="form-control" id="firstname" name="username" required />                      
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Select The Blood Group you're looking for</label>
+                            <div>
+                                <label for="A+" class="radio-inline"><input type="radio" name="bg" value="A+" id="A+">A+</label>
+                                <label for="A-" class="radio-inline"><input type="radio" name="bg" value="A-" id="A-">A-</label>   
+                                <label for="B+" class="radio-inline"><input type="radio" name="bg" value="B+" id="B+">B+</label>   
+                                <label for="B-" class="radio-inline"><input type="radio" name="bg" value="B-" id="B-">B-</label>   
+                                <label for="AB+" class="radio-inline"><input type="radio" name="bg" value="AB+" id="AB+">AB+</label>   
+                                <label for="AB-" class="radio-inline"><input type="radio" name="bg" value="AB-" id="AB-">AB-</label>   
+                                <label for="O+" class="radio-inline"><input type="radio" name="bg" value="O+" id="O+">O+</label>   
+                                <label for="O-" class="radio-inline"><input type="radio" name="bg" value="O-" id="O-">O-</label>   
+                            </div>                                             
+                        </div>
+                            <input type="submit" class="btn btn-primary">                                         
+                    </form>
+				</div>
+				<div class="panel-footer text-right">
+					<small> &copy; CSE311.9 GROUP 'I'</small>
+				</div>				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
